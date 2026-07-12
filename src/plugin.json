@@ -1,0 +1,57 @@
+{
+  "$schema": "https://raw.githubusercontent.com/grafana/grafana/main/docs/sources/developers/plugins/plugin.schema.json",
+  "type": "panel",
+  "name": "AlphaInfo Drift Monitor",
+  "id": "alphainfo-driftmonitor-panel",
+  "info": {
+    "keywords": [
+      "panel",
+      "mlops",
+      "drift",
+      "data-drift",
+      "model-drift",
+      "model-monitoring",
+      "ml-observability",
+      "anomaly-detection",
+      "regime-change",
+      "time-series",
+      "ai",
+      "alphainfo"
+    ],
+    "description": "Structural drift detection for model and data metrics — prediction scores, latencies, feature statistics. Classifies the metric's structure as stable / transition / unstable and marks transitions as drift events, so MLOps teams catch degradation before it becomes an incident. Verdict badge, overlay, optional per-window deep timeline, live quota footer.",
+    "author": {
+      "name": "alphainfo.io",
+      "url": "https://alphainfo.io"
+    },
+    "logos": {
+      "small": "img/logo.svg",
+      "large": "img/logo.svg"
+    },
+    "links": [
+      {
+        "name": "Website",
+        "url": "https://alphainfo.io"
+      },
+      {
+        "name": "API Guide",
+        "url": "https://alphainfo.io/v1/guide"
+      },
+      {
+        "name": "Get a free API key",
+        "url": "https://alphainfo.io/register"
+      }
+    ],
+    "screenshots": [
+      {
+        "name": "Drift event detected in a model metric",
+        "path": "img/screenshot-drift-event.png"
+      }
+    ],
+    "version": "%VERSION%",
+    "updated": "%TODAY%"
+  },
+  "dependencies": {
+    "grafanaDependency": ">=12.3.0",
+    "plugins": []
+  }
+}

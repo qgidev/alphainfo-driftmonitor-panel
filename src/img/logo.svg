@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- AlphaInfo Drift Monitor — dark navy badge, silver ring, violet curves
+       that start together and gradually drift apart. -->
+  <defs>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F2F3F5"/>
+      <stop offset="0.45" stop-color="#9DA3AE"/>
+      <stop offset="0.75" stop-color="#E4E6EA"/>
+      <stop offset="1" stop-color="#7F8694"/>
+    </linearGradient>
+    <radialGradient id="bg" cx="0.5" cy="0.42" r="0.75">
+      <stop offset="0" stop-color="#141C2B"/>
+      <stop offset="1" stop-color="#0B111C"/>
+    </radialGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="7" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <circle cx="256" cy="256" r="244" fill="url(#bg)"/>
+  <circle cx="256" cy="256" r="236" fill="none" stroke="url(#ring)" stroke-width="11"/>
+  <circle cx="256" cy="256" r="228" fill="none" stroke="#0A0F18" stroke-width="3" opacity="0.6"/>
+
+  <!-- reference path (stays) -->
+  <path d="M110 262
+           C 190 254 280 240 402 196"
+        fill="none" stroke="#B388FF" stroke-width="13"
+        stroke-linecap="round" filter="url(#glow)"/>
+  <!-- drifting path: solid while together, dashes as it drifts away -->
+  <path d="M110 262
+           C 176 264 232 274 278 290"
+        fill="none" stroke="#B388FF" stroke-width="13"
+        stroke-linecap="round" filter="url(#glow)"/>
+  <path d="M278 290
+           C 318 304 360 322 396 344"
+        fill="none" stroke="#B388FF" stroke-width="13"
+        stroke-linecap="round" stroke-dasharray="4 26" opacity="0.9" filter="url(#glow)"/>
+  <!-- divergence origin dot -->
+  <circle cx="110" cy="262" r="13" fill="#B388FF" filter="url(#glow)"/>
+</svg>
